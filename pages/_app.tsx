@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { createContext } from "react";
+import { AppProps } from "next/app";
 
 // App Context
 interface ValueAppProvider {}
@@ -15,13 +16,7 @@ import LayoutFade from "../components/variants/Fade";
 // Components
 import Nav from "../components/Nav/index";
 
-export default function CantaresApp({
-  Component,
-  pageProps,
-}: {
-  Component: any;
-  pageProps: any;
-}) {
+export default function CantaresApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>

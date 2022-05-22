@@ -1,3 +1,9 @@
+import Header from "../components/Home/Header/index";
+
 export default function () {
-  return <div>Hola Index</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }

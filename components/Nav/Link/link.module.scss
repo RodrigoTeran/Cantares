@@ -3,6 +3,7 @@
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             color: var(--primary-1-100);
+            text-decoration: underline;
         }
     }
 }

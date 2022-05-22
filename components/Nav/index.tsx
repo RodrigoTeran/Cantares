@@ -1,7 +1,6 @@
 import styles from "./nav.module.scss";
 
 import LogoIcon from "../Icons/Logo/index";
-
 import Link from "./Link/index";
 
 export default function Layout() {
@@ -16,7 +15,11 @@ export default function Layout() {
         <Link href="" text="SERVICIOS" />
         <Link href="" text="GALERÍA" />
       </div>
-      <div>social</div>
+      <div className={styles.nav_socialMedia}>
+        <img src="images/fb.png" alt="" />
+        <img src="images/IG.png" alt="" />
+        <img src="images/whatsapp.png" alt="" />
+      </div>
     </nav>
   );
 }
