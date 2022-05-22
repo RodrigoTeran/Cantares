@@ -1,7 +1,40 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import Head from "next/head";
+import { createContext } from "react";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+// App Context
+interface ValueAppProvider {}
+
+export const AppContext = createContext<Partial<ValueAppProvider>>({});
+
+// Styles
+import "../styles/globals.scss";
+
+// Variants
+import LayoutFade from "../components/variants/Fade";
+
+// Components
+import Nav from "../components/Nav/index";
+
+export default function CantaresApp({
+  Component,
+  pageProps,
+}: {
+  Component: any;
+  pageProps: any;
+}) {
+  return (
+    <>
+      <Head>
+        <title>Cantares</title>
+      </Head>
+      <AppContext.Provider value={{}}>
+        <LayoutFade>
+          <main className="layout_content">
+            <Nav />
+            <Component {...pageProps} />
+          </main>
+        </LayoutFade>
+      </AppContext.Provider>
+    </>
+  );
 }
-export default MyApp

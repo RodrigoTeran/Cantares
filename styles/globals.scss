@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    color: var(--black-100);
+}
+
+:root {
+    --black-100: #000;
+    --white-100: #fff;
+    --black-100-alpha-65: #000000a6;
+
+    --primary-1-100: #5c1d05;
+    --primary-2-100: #fff5ec;
+    --primary-3-100: #efe0d6;
+    --primary-4-100: #e9dfe6;
+
+    --warning-100: #fc5858;
+    --warning-200: #e9adad;
+    --warning-300: #d12828;
+
+    --success-100: #a6d6aa;
+    --success-200: #26572a;
+
+    --gray-100: #f8f9f6;
+    --gray-200: #e3e8ef;
+    --gray-300: #748094;
+    --gray-400: #a2aebe;
+    --gray-500: #4c5566;
+    --gray-600: #e2e8f0;
+    --gray-700: #cbd5e0;
+    --gray-800: #a0aec0;
+    --gray-900: #f8fafc;
+
+    --shadow-primary: #6b7279;
+}
+@media (hover: hover) and (pointer: fine) {
+    ::-webkit-scrollbar {
+        width: 0.7em;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--gray-700);
+        &:hover {
+            background-color: var(--gray-800);
+        }
+        &:active {
+            background-color: var(--gray-300);
+        }
+    }
+    ::-webkit-scrollbar-track-piece {
+        background-color: var(--gray-900);
+    }
+}
+
+::selection {
+    background-color: var(--primary-1-100);
+    color: var(--white-100);
+}
+
+html {
+    min-height: 100%;
+    width: 100vw;
+    position: relative;
+}
+body {
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: var(--white-100);
+    color: var(--black-100);
+}
+input,
+button {
+    outline: none;
+    border-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--black-100);
+}
