@@ -3,7 +3,11 @@ import History from "../components/Home/History/index";
 
 export default function () {
   return (
-    <div>
+    <div
+      style={{
+        zIndex: 1,
+      }}
+    >
       <Header />
       <History />
     </div>

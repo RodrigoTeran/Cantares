@@ -24,8 +24,8 @@ export default function CantaresApp({ Component, pageProps }: AppProps) {
       </Head>
       <AppContext.Provider value={{}}>
         <LayoutFade>
+          <Nav />
           <main className="layout_content">
-            <Nav />
             <Component {...pageProps} />
           </main>
         </LayoutFade>
