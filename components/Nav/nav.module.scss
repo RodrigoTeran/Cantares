@@ -1,2 +1,16 @@
 .nav {
+    height: 112px;
+    width: 100vw;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_links {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+    }
+}
+.logo {
+    width: 45px !important;
 }
