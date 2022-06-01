@@ -27,15 +27,41 @@
         font-size: 6rem;
         font-weight: 400;
         margin: 0;
+        @media screen and (max-width: 800px) {
+            font-size: 10vw;
+        }
+        @media screen and (max-width: 500px) {
+            text-align: center;
+            width: 100%;
+        }
     }
     span {
         color: var(--gray-500);
         font-size: 1.5rem;
         margin: 40px 0 24px 0;
+        @media screen and (max-width: 500px) {
+            text-align: center;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        padding: 0 100px 220px 100px;
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 500px) {
+        padding: 0 20px 220px 20px;
     }
 }
 
 .btns {
     display: flex;
     gap: 38px;
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        flex-wrap: wrap;
+        button {
+            width: 100% !important;
+        }
+    }
 }

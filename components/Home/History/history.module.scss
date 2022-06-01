@@ -10,14 +10,19 @@
         font-size: 4rem;
         color: var(--primary-1-100);
     }
+    @media screen and (max-width: 800px) {
+        span {
+            font-size: 11vw;
+        }
+    }
 }
 
 .logo {
-    width: 716px;
+    width: 40vw;
     height: 366px;
     position: absolute;
     top: calc(50% - 183px);
-    left: calc(50% - 358px);
+    left: calc(50% - 20vw);
     z-index: -1;
     img {
         object-fit: contain;
@@ -40,17 +45,32 @@
             color: var(--primary-1-100);
         }
     }
+    @media screen and (max-width: 800px) {
+        padding: 0 20px;
+        flex-wrap: wrap;
+        p {
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
 .images {
     display: flex;
     gap: 60px;
     justify-content: center;
+    flex-wrap: wrap;
 
     img {
         width: 200px;
         object-fit: contain;
         &:nth-child(2), &:nth-child(4) {
             margin-top: 120px;
+        }
+    }
+    @media screen and (max-width: 995px) {
+        padding: 0 20px;
+        img {
+            margin-top: 0px !important;
         }
     }
 }
