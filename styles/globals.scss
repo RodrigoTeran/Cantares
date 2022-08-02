@@ -1,11 +1,15 @@
 * {
     box-sizing: border-box;
     color: var(--black-100);
+    font-family: "Unna";
+    font-size: 16px;
 }
 
 :root {
     --black-100: #000;
     --white-100: #fff;
+    --white-100-alpha-75: #ffffffbf;
+    --white-100-alpha-84: #ffffffcc;
     --black-100-alpha-65: #000000a6;
 
     --primary-1-100: #5c1d05;
@@ -69,7 +73,6 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    font-size: 16px;
     font-family: sans-serif;
     background-color: var(--white-100);
     color: var(--black-100);
@@ -82,4 +85,7 @@ button {
 a {
     text-decoration: none;
     color: var(--black-100);
+}
+.layout_content {
+    z-index: 1;
 }

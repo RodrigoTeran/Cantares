@@ -1,0 +1,9 @@
+.link_style {
+    transition: color ease-out 300ms;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: var(--primary-1-100);
+            text-decoration: underline;
+        }
+    }
+}

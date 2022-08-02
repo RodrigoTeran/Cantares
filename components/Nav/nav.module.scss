@@ -1,2 +1,37 @@
 .nav {
+    height: 112px;
+    width: 100vw;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white-100-alpha-75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    &_links {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        @media screen and (max-width:800px) {
+            display: none; // TODO
+        }
+    }
+    &_socialMedia {
+        gap: 11px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 18px !important;
+            cursor: pointer;
+        }
+    }
+    @media screen and (max-width:450px) {
+        padding: 0 40px;
+    }
+}
+.logo {
+    width: 45px !important;
 }
