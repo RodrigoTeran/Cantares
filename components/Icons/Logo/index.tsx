@@ -1,6 +1,6 @@
 import type { PropsIcon } from "../icons.types";
 
-export default function ({ _className, _click }: PropsIcon) {
+export default function Component ({ _className, _click }: PropsIcon) {
   return (
     <svg
       width="45"

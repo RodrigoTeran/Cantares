@@ -2,7 +2,7 @@ import styles from "./header.module.scss";
 
 import Btn from "../../Buttons/index";
 
-export default function () {
+export default function Component() {
   return (
     <header className={styles.header}>
       <h1>CANTARES</h1>

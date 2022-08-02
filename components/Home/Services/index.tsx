@@ -20,7 +20,7 @@ const Container = ({ title, subtitile }: Props) => {
   );
 };
 
-export default function() {
+export default function Component() {
   return (
     <section className={styles.history}>
       <h2 className={stylesIndex.header}>Servicios</h2>

@@ -1,6 +1,6 @@
 import styles from "./footer.module.scss";
 
-export default function() {
+export default function Component() {
   return (
     <section className={styles.footer}>
       <div className={styles.footer_data}>

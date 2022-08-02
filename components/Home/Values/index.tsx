@@ -14,7 +14,7 @@ const Container = ({ text, isLeft }: Props) => {
   );
 };
 
-export default function() {
+export default function Component() {
   return (
     <section className={styles.history}>
       <h2 className={stylesIndex.header}>Nos disntiguimos por nuestros valores</h2>
