@@ -5,7 +5,7 @@ import Values from "../components/Home/Values/index";
 import Services from "../components/Home/Services/index";
 import Footer from "../components/Footer/index";
 
-export default function () {
+export default function Component() {
   return (
     <div
       style={{

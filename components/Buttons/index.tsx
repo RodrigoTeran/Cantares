@@ -7,7 +7,7 @@ type Props = {
   size: "sm" | "md" | "lg";
 };
 
-export default function ({ text, _click, color, size }: Props) {
+export default function Component ({ text, _click, color, size }: Props) {
   return (
     <button
       className={`${styles.btn} ${styles[`color_${color}`]} ${styles[size]}`}

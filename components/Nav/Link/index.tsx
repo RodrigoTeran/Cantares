@@ -7,7 +7,7 @@ type Props = {
   _className?: string;
 };
 
-export default function ({ text, href, _className }: Props) {
+export default function Component ({ text, href, _className }: Props) {
   return (
     <Link passHref href={href}>
       <a className={`${_className} ${styles.link_style}`}>{text}</a>

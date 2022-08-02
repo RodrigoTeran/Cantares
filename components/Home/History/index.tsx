@@ -1,7 +1,7 @@
 import styles from "./history.module.scss";
 import stylesIndex from "../index.module.scss";
 
-export default function () {
+export default function Component() {
   return (
     <section className={styles.history}>
       <div className={styles.logo}>

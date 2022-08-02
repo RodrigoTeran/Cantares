@@ -21,7 +21,7 @@ const Container = ({ src, children, isActive, onClick }: Props) => {
   );
 };
 
-export default function() {
+export default function Component() {
   const stagesArray: Array<string> = ["Misión", "Visión", "Valores"];
   const stagesContentArray: Array<string> = [
     "Misión lorem",
