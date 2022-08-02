@@ -61,7 +61,7 @@ export default function Component() {
           <img src="images/fb.png" alt="" /> FACEBOOK
         </div>
         <div>
-          <img src="images/IG.png" alt="" /> INSTAGRAM
+          <img src="images/ig.png" alt="" /> INSTAGRAM
         </div>
         <div>
           <img src="images/whatsapp.png" alt="" /> WHATSAPP

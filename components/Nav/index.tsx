@@ -17,7 +17,7 @@ export default function Layout() {
       </div>
       <div className={styles.nav_socialMedia}>
         <img src="images/fb.png" alt="" />
-        <img src="images/IG.png" alt="" />
+        <img src="images/ig.png" alt="" />
         <img src="images/whatsapp.png" alt="" />
       </div>
     </nav>
