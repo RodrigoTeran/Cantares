@@ -10,10 +10,10 @@ export default function Layout() {
         <LogoIcon _className={styles.logo} />
       </div>
       <div className={styles.nav_links}>
-        <Link href="" text="INICIO" />
-        <Link href="" text="NOSOTROS" />
-        <Link href="" text="SERVICIOS" />
-        <Link href="" text="GALERÍA" />
+        <Link href="/" text="INICIO" />
+        <Link href="/nosotros" text="NOSOTROS" />
+        <Link href="/servicios" text="SERVICIOS" />
+        <Link href="/galeria" text="GALERÍA" />
       </div>
       <div className={styles.nav_socialMedia}>
         <img src="images/fb.png" alt="" />
