@@ -11,7 +11,14 @@ export default function Component() {
         CANTARES
       </h1>
       <div className={styles.btns}>
-        <Btn text="Abrir Mapa" _click={() => {}} color={5} size="md" />
+        <Btn
+          text="Abrir Mapa"
+          _click={() => {
+            window.open("https://goo.gl/maps/WoeZounmec1BsA3e7", "_blank");
+          }}
+          color={5}
+          size="md"
+        />
       </div>
     </header>
   );

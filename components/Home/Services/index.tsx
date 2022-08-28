@@ -1,6 +1,7 @@
 import styles from "./history.module.scss";
 import stylesIndex from "../index.module.scss";
 import Btn from "../../Buttons/index";
+import {useRouter} from "next/router";
 
 type Props = {
   title: string;
@@ -8,6 +9,7 @@ type Props = {
 };
 
 const Container = ({ title, subtitile }: Props) => {
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <svg viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +17,9 @@ const Container = ({ title, subtitile }: Props) => {
       </svg>
       <div>{title}</div>
       <div>{subtitile}</div>
-      <Btn text="Ir a servicio" _click={() => {}} color={1} size="sm" />
+      <Btn text="Ir a servicio" _click={() => {
+        router.replace("/servicios")
+      }} color={1} size="sm" />
     </div>
   );
 };
@@ -26,10 +30,10 @@ export default function Component() {
       <h2 className={stylesIndex.header}>Servicios</h2>
       <span>Conoce nuestros servicios</span>
       <div className={styles.containers}>
-        <Container title="Pensión para caballos" subtitile="Lorem ipsum" />
-        <Container title="Equino-terapia" subtitile="Lorem ipsum" />
-        <Container title="Clases de equitación" subtitile="Lorem ipsum" />
-        <Container title="Actividades ecuestres" subtitile="Lorem ipsum" />
+        <Container title="Pensión para caballos" subtitile="Servicio de hospedaje" />
+        <Container title="Equino-terapia" subtitile="Rehabilitación" />
+        <Container title="Clases de equitación" subtitile="Mejora la concentración" />
+        <Container title="Actividades ecuestres" subtitile="Para toda la familia" />
       </div>
     </section>
   );

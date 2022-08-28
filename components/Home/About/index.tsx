@@ -24,9 +24,9 @@ const Container = ({ src, children, isActive, onClick }: Props) => {
 export default function Component() {
   const stagesArray: Array<string> = ["Misión", "Visión", "Valores"];
   const stagesContentArray: Array<string> = [
-    "Misión lorem",
+    "Crear experiencias extraordinarias a través de la conexión con los caballos y las personas para lograr dejar una huella trascendental en quienes decidan vivir esta experiencia.",
     "Ser un centro ecuestre reconocido por la labor que se hace creando la diferencia a través de la atención personalizada en un ambiente familiar, en el que se crean experiencias maravillosas y se cambian vidas. Compartiendo la pasión equina.",
-    "Valores lorem"
+    "De nuestros valores destacan el respeto, la honestidad, la confianza, el compromiso, la lealtad, la sustentabilidadad, la transparencia, la equidad, el profesionalismo, la ética, el liderazgo, el bienestar animal."
   ];
   const [stage, setStage] = useState<number>(1);
 

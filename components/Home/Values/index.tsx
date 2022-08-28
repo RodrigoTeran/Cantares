@@ -8,8 +8,10 @@ type Props = {
 
 const Container = ({ text, isLeft }: Props) => {
   return (
-    <div className={`${styles.container} ${isLeft && styles.container_left}`}>
-      {text}
+    <div className={styles.container_parent}>
+      <div className={`${styles.container} ${isLeft && styles.container_left}`}>
+        {text}
+      </div>
     </div>
   );
 };
@@ -17,7 +19,9 @@ const Container = ({ text, isLeft }: Props) => {
 export default function Component() {
   return (
     <section className={styles.history}>
-      <h2 className={stylesIndex.header}>Nos disntiguimos por nuestros valores</h2>
+      <h2 className={stylesIndex.header}>
+        Nos disntiguimos por nuestros valores
+      </h2>
       <span>Valores</span>
       <div className={styles.containers}>
         <Container text="RESPESTO" />

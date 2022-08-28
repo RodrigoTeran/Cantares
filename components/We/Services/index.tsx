@@ -1,13 +1,15 @@
 import styles from "./history.module.scss";
 import stylesIndex from "../../Home/index.module.scss";
 import Btn from "../../Buttons/index";
+import { useState } from "react";
 
 type Props = {
   title: string;
   subtitile: string;
+  openCall: () => void;
 };
 
-const Container = ({ title, subtitile }: Props) => {
+const Container = ({ title, subtitile, openCall }: Props) => {
   return (
     <div className={styles.container}>
       <svg viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
@@ -15,22 +17,79 @@ const Container = ({ title, subtitile }: Props) => {
       </svg>
       <div>{title}</div>
       <div>{subtitile}</div>
-      <Btn text="Ir a servicio" _click={() => {}} color={1} size="sm" />
+      <Btn text="Ir a servicio" _click={openCall} color={1} size="sm" />
     </div>
   );
 };
 
+const SERVICES = [
+  ["Pensión para caballos", "Hospedaje de caballos en un ambiente higiénico y aislante del frio."],
+  ["Equinoterapia", "Es la habilitación y rehabilitación física y psicológica por medio del caballo"],
+  ["Clases de equitación", "Foratelece la musculatura, mejora el equilibro y la coordinación. Mejora la postura."],
+  ["Actividades ecuestres", "Para toda la familia."],
+];
+
 export default function Component() {
+  const [isModal, setIsModal] = useState(false);
+  const [modalIndex, setModalIndex] = useState<0 | 1 | 2 | 3>(0);
+
   return (
     <section className={styles.history}>
       <h2 className={stylesIndex.header}>Servicios</h2>
       <span>Conoce nuestros servicios</span>
       <div className={styles.containers}>
-        <Container title="Pensión para caballos" subtitile="Lorem ipsum" />
-        <Container title="Equino-terapia" subtitile="Lorem ipsum" />
-        <Container title="Clases de equitación" subtitile="Lorem ipsum" />
-        <Container title="Actividades ecuestres" subtitile="Lorem ipsum" />
+        <Container
+          title="Pensión para caballos"
+          subtitile="Servicio de hospedaje"
+          openCall={() => {
+            setIsModal(true);
+            setModalIndex(0);
+          }}
+        />
+        <Container
+          title="Equino-terapia"
+          subtitile="Rehabilitación"
+          openCall={() => {
+            setIsModal(true);
+            setModalIndex(1);
+          }}
+        />
+        <Container
+          title="Clases de equitación"
+          subtitile="Mejora la concentración"
+          openCall={() => {
+            setIsModal(true);
+            setModalIndex(2);
+          }}
+        />
+        <Container
+          title="Actividades ecuestres"
+          subtitile="Para toda la familia"
+          openCall={() => {
+            setIsModal(true);
+            setModalIndex(3);
+          }}
+        />
       </div>
+      {isModal && (
+        <div className={styles.modal}>
+          <div className={styles.modal_card}>
+            <div className={styles.modal_card_x}>
+              <svg
+                onClick={() => {
+                  setIsModal(false);
+                }}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 352 512"
+              >
+                <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+              </svg>
+            </div>
+            <div className={styles.modal_title}>{SERVICES[modalIndex][0]}</div>
+            <div className={styles.modal_text}>{SERVICES[modalIndex][1]}</div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

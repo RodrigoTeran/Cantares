@@ -1,5 +1,6 @@
-import Header from "../components/Services/Header/index";
-import Background from "../components/Services/Background/index";
+import Footer from "../components/Footer/index";
+import Services from "../components/We/Services/index";
+import Header from "../components/We/Header/index";
 
 export default function Component() {
   return (
@@ -9,7 +10,8 @@ export default function Component() {
       }}
     >
       <Header />
-      <Background />
+      <Services />
+      <Footer />
     </div>
   );
 }
