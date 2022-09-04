@@ -16,9 +16,33 @@ export default function Layout() {
         <Link href="/galeria" text="GALERÍA" />
       </div>
       <div className={styles.nav_socialMedia}>
-        <img src="images/fb.png" alt="" />
-        <img src="images/ig.png" alt="" />
-        <img src="images/whatsapp.png" alt="" />
+        <img
+          onClick={() => {
+            window.open(
+              "https://www.facebook.com/Centro-Ecuestre-Cantares-100164208863570",
+              "_blank"
+            );
+          }}
+          src="images/fb.png"
+          alt=""
+        />
+        <img
+          onClick={() => {
+            window.open(
+              "https://instagram.com/centro_ecuestre_cantares?igshid=YmMyMTA2M2Y=",
+              "_blank"
+            );
+          }}
+          src="images/ig.png"
+          alt=""
+        />
+        <img
+          onClick={() => {
+            window.open("https://wa.me/5214421198980", "_blank");
+          }}
+          src="images/whatsapp.png"
+          alt=""
+        />
       </div>
     </nav>
   );

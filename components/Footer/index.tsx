@@ -4,7 +4,7 @@ export default function Component() {
   return (
     <section className={styles.footer}>
       <div className={styles.footer_data}>
-      <div className={styles.footer_data_title}>
+        <div className={styles.footer_data_title}>
           <svg
             width="24"
             height="30"
@@ -58,13 +58,40 @@ export default function Component() {
       </div>
       <div className={styles.footer_socialMedia}>
         <div>
-          <img src="images/fb.png" alt="" /> FACEBOOK
+          <img
+            onClick={() => {
+              window.open(
+                "https://www.facebook.com/Centro-Ecuestre-Cantares-100164208863570",
+                "_blank"
+              );
+            }}
+            src="images/fb.png"
+            alt=""
+          />{" "}
+          FACEBOOK
         </div>
         <div>
-          <img src="images/ig.png" alt="" /> INSTAGRAM
+          <img
+            onClick={() => {
+              window.open(
+                "https://instagram.com/centro_ecuestre_cantares?igshid=YmMyMTA2M2Y=",
+                "_blank"
+              );
+            }}
+            src="images/ig.png"
+            alt=""
+          />{" "}
+          INSTAGRAM
         </div>
         <div>
-          <img src="images/whatsapp.png" alt="" /> WHATSAPP
+          <img
+            onClick={() => {
+              window.open("https://wa.me/5214421198980", "_blank");
+            }}
+            src="images/whatsapp.png"
+            alt=""
+          />{" "}
+          WHATSAPP
         </div>
       </div>
     </section>
