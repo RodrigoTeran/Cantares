@@ -10,12 +10,13 @@
     top: 0;
     left: 0;
     z-index: 10;
+
     &_links {
         display: flex;
         align-items: center;
         gap: 80px;
-        @media screen and (max-width:800px) {
-            display: none; // TODO
+        @media screen and (max-width: 800px) {
+            display: none;
         }
     }
     &_socialMedia {
@@ -27,11 +28,72 @@
             width: 18px !important;
             cursor: pointer;
         }
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
     }
-    @media screen and (max-width:450px) {
+    @media screen and (max-width: 450px) {
         padding: 0 40px;
     }
 }
 .logo {
     width: 45px !important;
+}
+.replica {
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    @media screen and (min-width: 800px) {
+        display: none;
+    }
+    &.not_open {
+        display: none !important;
+    }
+    .nav_links,
+    .nav_socialMedia {
+        display: flex !important;
+    }
+    .nav_socialMedia {
+        img {
+            width: 50px !important;
+        }
+    }
+    .nav_links {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        a {
+            font-size: 2rem !important;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+.ham {
+    display: none;
+    @media screen and (max-width: 800px) {
+        display: flex;
+    }
+    gap: 10px;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 999999;
+    div {
+        width: 35px;
+        height: 3px;
+        background-color: #000;
+        border-radius: 1000px;
+    }
 }

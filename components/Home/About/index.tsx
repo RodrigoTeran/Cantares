@@ -7,12 +7,13 @@ type Props = {
   children: any;
   isActive?: boolean;
   onClick: () => void;
+  _class?: string
 };
 
-const Container = ({ src, children, isActive, onClick }: Props) => {
+const Container = ({ src, children, isActive, onClick, _class }: Props) => {
   return (
     <div
-      className={`${styles.container} ${isActive && styles.container_active}`}
+      className={`${styles.container} ${isActive && styles.container_active} ${_class}`}
       onClick={onClick}
     >
       <img src={src} alt="Acerca de" />
@@ -44,6 +45,7 @@ export default function Component() {
             }
           }}
           src={`images/about${(stage - 1 < 0 ? 2 : stage - 1) + 1}.jpeg`}
+          _class={styles.appear}
         >
           {stagesArray[stage - 1 < 0 ? 2 : stage - 1]}
         </Container>
@@ -65,6 +67,19 @@ export default function Component() {
           src={`images/about${(stage + 1 > 2 ? 0 : stage + 1) + 1}.jpeg`}
         >
           {stagesArray[stage + 1 > 2 ? 0 : stage + 1]}
+        </Container>
+        <Container
+          onClick={() => {
+            if (stage == 0) {
+              setStage(2);
+            } else {
+              setStage(prev => prev - 1);
+            }
+          }}
+          src={`images/about${(stage - 1 < 0 ? 2 : stage - 1) + 1}.jpeg`}
+          _class={styles.appear2}
+        >
+          {stagesArray[stage - 1 < 0 ? 2 : stage - 1]}
         </Container>
       </div>
     </section>

@@ -9,7 +9,7 @@ export default function Component() {
   return (
     <div
       style={{
-        zIndex: 1,
+        zIndex: 1
       }}
     >
       <Header />

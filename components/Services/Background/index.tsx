@@ -1,7 +1,5 @@
 import styles from "./header.module.scss";
 
-import Btn from "../../Buttons/index";
-
 export default function Component() {
   return (
     <header className={styles.header}>
