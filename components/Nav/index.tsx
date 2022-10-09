@@ -54,7 +54,7 @@ export default function Layout() {
         <img
           onClick={() => {
             setIsReplicaOpen(false);
-            window.open("https://wa.me/5214421198980", "_blank");
+            window.open("https://wa.me/5214425827416", "_blank");
           }}
           src="images/whatsapp.png"
           alt=""
@@ -96,7 +96,7 @@ export default function Layout() {
           />
           <img
             onClick={() => {
-              window.open("https://wa.me/5214421198980", "_blank");
+              window.open("https://wa.me/5214425827416", "_blank");
             }}
             src="images/whatsapp.png"
             alt=""

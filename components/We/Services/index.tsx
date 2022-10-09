@@ -23,9 +23,9 @@ const Container = ({ title, subtitile, openCall }: Props) => {
 };
 
 const SERVICES = [
-  ["Pensión para caballos", "Hospedaje de caballos en un ambiente higiénico y aislante del frio."],
-  ["Equinoterapia", "Es la habilitación y rehabilitación física y psicológica por medio del caballo"],
-  ["Clases de equitación", "Foratelece la musculatura, mejora el equilibro y la coordinación. Mejora la postura."],
+  ["Pensión para caballos", "Pensión para caballos Incluye: Caballeriza, cama, Alimento de pastura alfalfa y avena. El costo es de $9,000"],
+  ["Equinoterapia", "La equinoterapia es la habilitación o rehabilitación física y psicológica por medio del caballo. En la sesión trabajamos por medio de juegos con la ayuda de nuestros amigos los caballos. La duración de cada sesión es de 30 minutos. El costo es de $500, si se inscriben todo el mes se hace un descuento quedando en $400 por sesión. $1,600 el mes  (4 clases). Contamos con una clase prueba gratuita, los esperamos, cualquier duda quedo a sus órdenes. "],
+  ["Clases de equitación", "Las clases de equitación ayudan a tener coordinación, equilibrio, confianza, liderazgo y una conexión con el caballo. La duración de cada clase es de 30 - 45 minutos. "],
   ["Actividades ecuestres", "Para toda la familia."],
 ];
 
